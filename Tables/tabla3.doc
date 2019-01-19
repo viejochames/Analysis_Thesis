@@ -1,0 +1,60 @@
+{\rtf1\fs24
+\pard\qc
+Table 1. Dif-Dif estimation z-score prosocial behavior\par
+treatments and exposure to violence - objective: intensive analysis.\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx3312\clbrdrt\brdrs\cellx4752\clbrdrt\brdrs\cellx6192\clbrdrt\brdrs\cellx7632\clbrdrt\brdrs\cellx9072
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3312\cellx4752\cellx6192\cellx7632\cellx9072
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4752\clbrdrb\brdrs\cellx6192\clbrdrb\brdrs\cellx7632\clbrdrb\brdrs\cellx9072
+\ql VARIABLES\cell\qc Prosocial\cell\qc Prosocial\cell\qc Prosocial\cell\qc Prosocial\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3312\cellx4752\cellx6192\cellx7632\cellx9072
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql primed\cell\qc -0.02\cell\qc -0.04\cell\qc -0.01\cell\qc -0.02\cell\row
+\ql \cell\qc (0.14)\cell\qc (0.14)\cell\qc (0.14)\cell\qc (0.15)\cell\row
+\ql nws\cell\qc -0.14\cell\qc -0.10\cell\qc -0.13\cell\qc -0.09\cell\row
+\ql \cell\qc (0.14)\cell\qc (0.15)\cell\qc (0.14)\cell\qc (0.15)\cell\row
+\ql HETV_int\cell\qc -0.12\cell\qc -0.08\cell\qc -0.08\cell\qc -0.04\cell\row
+\ql \cell\qc (0.16)\cell\qc (0.17)\cell\qc (0.20)\cell\qc (0.20)\cell\row
+\ql int_os_int_p\cell\qc -0.02\cell\qc -0.04\cell\qc -0.03\cell\qc -0.06\cell\row
+\ql \cell\qc (0.19)\cell\qc (0.19)\cell\qc (0.19)\cell\qc (0.19)\cell\row
+\ql int_os_int_n\cell\qc 0.06\cell\qc 0.03\cell\qc 0.03\cell\qc 0.01\cell\row
+\ql \cell\qc (0.19)\cell\qc (0.19)\cell\qc (0.19)\cell\qc (0.19)\cell\row
+\ql age\cell\qc \cell\qc 0.01\cell\qc \cell\qc 0.01\cell\row
+\ql \cell\qc \cell\qc (0.02)\cell\qc \cell\qc (0.02)\cell\row
+\ql ses\cell\qc \cell\qc 0.07\cell\qc \cell\qc 0.06\cell\row
+\ql \cell\qc \cell\qc (0.07)\cell\qc \cell\qc (0.09)\cell\row
+\ql idipron\cell\qc \cell\qc 0.17\cell\qc \cell\qc 0.20\cell\row
+\ql \cell\qc \cell\qc (0.16)\cell\qc \cell\qc (0.17)\cell\row
+\ql female\cell\qc \cell\qc -0.06\cell\qc \cell\qc -0.06\cell\row
+\ql \cell\qc \cell\qc (0.10)\cell\qc \cell\qc (0.10)\cell\row
+\ql wrongq\cell\qc \cell\qc 0.12***\cell\qc \cell\qc 0.12***\cell\row
+\ql \cell\qc \cell\qc (0.04)\cell\qc \cell\qc (0.04)\cell\row
+\ql thesis1playerun\cell\qc \cell\qc 0.10\cell\qc \cell\qc 0.11\cell\row
+\ql \cell\qc \cell\qc (0.10)\cell\qc \cell\qc (0.10)\cell\row
+\ql thesis1playerpolitical\cell\qc \cell\qc 0.05\cell\qc \cell\qc 0.05\cell\row
+\ql \cell\qc \cell\qc (0.07)\cell\qc \cell\qc (0.07)\cell\row
+\ql thesis1players25\cell\qc \cell\qc -0.02\cell\qc \cell\qc -0.03\cell\row
+\ql \cell\qc \cell\qc (0.06)\cell\qc \cell\qc (0.06)\cell\row
+\ql thesis1players24\cell\qc \cell\qc -0.07\cell\qc \cell\qc -0.07\cell\row
+\ql \cell\qc \cell\qc (0.13)\cell\qc \cell\qc (0.14)\cell\row
+\ql gasto_semanal\cell\qc \cell\qc \cell\qc 0.00\cell\qc 0.00\cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.00)\cell\qc (0.00)\cell\row
+\ql educacion\cell\qc \cell\qc \cell\qc 0.05\cell\qc 0.05\cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.07)\cell\qc (0.07)\cell\row
+\ql estrato_1_y_2\cell\qc \cell\qc \cell\qc 0.00\cell\qc 0.00\cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.00)\cell\qc (0.00)\cell\row
+\ql movilidad\cell\qc \cell\qc \cell\qc -0.00\cell\qc -0.00\cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.01)\cell\qc (0.01)\cell\row
+\ql vivienda_propia\cell\qc \cell\qc \cell\qc -0.00\cell\qc -0.00\cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.01)\cell\qc (0.01)\cell\row
+\ql Constant\cell\qc 0.13\cell\qc -0.55\cell\qc -0.31\cell\qc -0.92\cell\row
+\ql \cell\qc (0.11)\cell\qc (0.46)\cell\qc (1.12)\cell\qc (1.26)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 446\cell\qc 446\cell\qc 446\cell\qc 446\cell\row
+\ql R-squared\cell\qc 0.01\cell\qc 0.04\cell\qc 0.01\cell\qc 0.04\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4752\clbrdrb\brdrs\cellx6192\clbrdrb\brdrs\cellx7632\clbrdrb\brdrs\cellx9072
+\ql F test\cell\qc 0.562\cell\qc 1.251\cell\qc 0.472\cell\qc 1.178\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

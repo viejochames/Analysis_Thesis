@@ -1,0 +1,51 @@
+Table 7. Dif-Dif estimation cooperation				
+treatments and exposure to violence - objective: intensive analysis.				
+	(1)	(2)	(3)	(4)
+VARIABLES	Cooperation	Cooperation	Cooperation	Cooperation
+				
+primed	0.03	0.01	0.03	0.01
+	(0.06)	(0.06)	(0.06)	(0.06)
+nws	0.02	0.01	0.02	0.02
+	(0.06)	(0.06)	(0.06)	(0.06)
+HETV_int	0.01	0.00	0.01	-0.00
+	(0.07)	(0.07)	(0.08)	(0.09)
+int_os_int_p	-0.05	-0.04	-0.05	-0.03
+	(0.08)	(0.08)	(0.08)	(0.09)
+int_os_int_n	-0.08	-0.07	-0.08	-0.08
+	(0.08)	(0.08)	(0.08)	(0.08)
+age		-0.00		-0.00
+		(0.01)		(0.01)
+ses		0.01		0.02
+		(0.03)		(0.04)
+idipron		0.04		0.03
+		(0.06)		(0.06)
+female		-0.05		-0.06
+		(0.04)		(0.04)
+wrongq		0.02		0.02
+		(0.02)		(0.02)
+thesis1playerun		0.03		0.03
+		(0.04)		(0.05)
+thesis1playerpolitical		0.03		0.03
+		(0.03)		(0.03)
+thesis1players25		-0.01		-0.01
+		(0.03)		(0.03)
+thesis1players24		0.02		0.03
+		(0.05)		(0.06)
+gasto_semanal			0.00	0.00
+			(0.00)	(0.00)
+educacion			0.02	0.03
+			(0.03)	(0.03)
+estrato_1_y_2			0.00	0.00
+			(0.00)	(0.00)
+movilidad			-0.00	-0.00
+			(0.00)	(0.00)
+vivienda_propia			-0.00	-0.00
+			(0.00)	(0.00)
+Constant	0.48***	0.38*	0.29	0.08
+	(0.05)	(0.19)	(0.46)	(0.52)
+				
+Observations	223	223	223	223
+R-squared	0.01	0.04	0.02	0.05
+F test	0.721	0.624	0.487	0.591
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

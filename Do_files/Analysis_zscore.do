@@ -265,11 +265,33 @@ tab HETSV_ext
 
 *Objective exposure to urban violence index
 *Generate the mean of the variables 2017 - 2018
-gen homicide_two = (tasa_homicidio_2017+tasa_homicidio_2018)/2 
-gen theft_two = (tasa_hurtos_2017 + tasa_hurtos_2018)/2
+*gen homicide_two = (tasa_homicidio_2017+tasa_homicidio_2018)/2 
+*gen theft_two = (tasa_hurtos_2017 + tasa_hurtos_2018)/2
 
 *Create the index by principal component analysis
-pca homicide_two theft_two
+*pca homicide_two theft_two
+*screeplot
+*loadingplot, maxlength(18)
+*To create the index we use only the first component
+*predict violence_sub2, score
+*summarize violence_sub2
+
+*Standarized the index between 0 - 1
+*egen minviolence_sub2 = min(violence_sub2)
+*gen os1 =  violence_sub2 + (minviolence_sub2*(-1))
+*egen os2 = max(os1)
+*gen os = os1 / os2
+*sum os
+
+/*====================================================================
+                        5.A: Objective exposure to 
+						urban violence index (vo)
+						Only 2018
+====================================================================*/
+*uncomment for only 2018
+*Objective exposure to urban violence index
+*Create the index by principal component analysis
+pca tasa_homicidio_2018 tasa_hurtos_2018
 screeplot
 loadingplot, maxlength(18)
 *To create the index we use only the first component
@@ -282,28 +304,6 @@ gen os1 =  violence_sub2 + (minviolence_sub2*(-1))
 egen os2 = max(os1)
 gen os = os1 / os2
 sum os
-
-/*====================================================================
-                        5.A: Objective exposure to 
-						urban violence index (vo)
-						Only 2018
-====================================================================*/
-*uncomment for only 2018
-*Objective exposure to urban violence index
-*Create the index by principal component analysis
-**pca tasa_homicidio_2018 tasa_hurtos_2018
-**screeplot
-**loadingplot, maxlength(18)
-*To create the index we use only the first component
-**predict violence_sub2, score
-**summarize violence_sub2
-
-*Standarized the index between 0 - 1
-**egen minviolence_sub2 = min(violence_sub2)
-**gen os1 =  violence_sub2 + (minviolence_sub2*(-1))
-**egen os2 = max(os1)
-**gen os = os1 / os2
-**sum os
 
 /*====================================================================
                         5.1: Intesive margin variable for os
@@ -619,11 +619,33 @@ tab HETSV_ext
 
 *Objective exposure to urban violence index
 *Generate the mean of the variables 2017 - 2018
-gen homicide_two = (tasa_homicidio_2017+tasa_homicidio_2018)/2 
-gen theft_two = (tasa_hurtos_2017 + tasa_hurtos_2018)/2
+*gen homicide_two = (tasa_homicidio_2017+tasa_homicidio_2018)/2 
+*gen theft_two = (tasa_hurtos_2017 + tasa_hurtos_2018)/2
 
 *Create the index by principal component analysis
-pca homicide_two theft_two
+*pca homicide_two theft_two
+*screeplot
+*loadingplot, maxlength(18)
+*To create the index we use only the first component
+*predict violence_sub2, score
+*summarize violence_sub2
+
+*Standarized the index between 0 - 1
+*egen minviolence_sub2 = min(violence_sub2)
+*gen os1 =  violence_sub2 + (minviolence_sub2*(-1))
+*egen os2 = max(os1)
+*gen os = os1 / os2
+*sum os
+
+/*====================================================================
+                        5.A: Objective exposure to 
+						urban violence index (vo)
+						Only 2018
+====================================================================*/
+*uncomment for only 2018
+*Objective exposure to urban violence index
+*Create the index by principal component analysis
+pca tasa_homicidio_2018 tasa_hurtos_2018
 screeplot
 loadingplot, maxlength(18)
 *To create the index we use only the first component
@@ -636,28 +658,6 @@ gen os1 =  violence_sub2 + (minviolence_sub2*(-1))
 egen os2 = max(os1)
 gen os = os1 / os2
 sum os
-
-/*====================================================================
-                        5.A: Objective exposure to 
-						urban violence index (vo)
-						Only 2018
-====================================================================*/
-*uncomment for only 2018
-*Objective exposure to urban violence index
-*Create the index by principal component analysis
-**pca tasa_homicidio_2018 tasa_hurtos_2018
-**screeplot
-**loadingplot, maxlength(18)
-*To create the index we use only the first component
-**predict violence_sub2, score
-**summarize violence_sub2
-
-*Standarized the index between 0 - 1
-**egen minviolence_sub2 = min(violence_sub2)
-**gen os1 =  violence_sub2 + (minviolence_sub2*(-1))
-**egen os2 = max(os1)
-**gen os = os1 / os2
-**sum os
 
 /*====================================================================
                         5.1: Intesive margin variable for os
@@ -769,11 +769,123 @@ replace prosocial = altruism if prosocial == .
 
 
 /*====================================================================
-                        B: ANALYSIS
+                        B: ANALYSIS: PROSOCIAL
 ====================================================================*/
-reg prosocial primed nws diff, rob
-reg prosocial primed nws diff, cluster(id)
-reg prosocial primed nws HETSV_int int_vs_int_p, cluster(id)
+***Define the directory for outputs
+cd "C:\Users\LENOVO IDEAPAD 510\Documents\Universidad Nacional\Tesis maestría\Experiment\Análisis\Analysis_Thesis\Tables"
+
+/*====================================================================
+					Subjective analysis
+====================================================================*/
+/*====================================================================
+					Intesive margin 
+====================================================================*/
+**** regression intensive margin subjective index
+reg prosocial primed nws HETSV_int int_vs_int_p int_vs_int_n, cluster(id) 
+outreg2 using tabla1.doc, replace dec(2) ctitle(Prosocial) ///
+title(Table 1. Dif-Dif estimation z-score prosocial behavior, treatments and exposure to violence - self-reported: intensive analysis.) ///
+ alpha(0.01, 0.05, 0.1) symbol(***,**,*) addstat(F test, e(F)):
+**** regression intensive margin subjective index with individual controls
+reg prosocial primed nws HETSV_int int_vs_int_p int_vs_int_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24, cluster(id) 
+outreg2 using tabla1.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression intensive margin subjective index with district controls
+reg prosocial primed nws HETSV_int int_vs_int_p int_vs_int_n gasto_semanal ///
+educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla1.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression intensive margin subjective index with all controls
+reg prosocial primed nws HETSV_int int_vs_int_p int_vs_int_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24 gasto_semanal educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla1.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+
+/*====================================================================
+					Extensive margin 
+====================================================================*/
+**** regression extensive margin subjective index
+reg prosocial primed nws HETSV_ext int_vs_ext_p int_vs_ext_n, cluster(id) 
+outreg2 using tabla2.doc, replace dec(2) ctitle(Prosocial) ///
+title(Table 2. Dif-Dif estimation z-score prosocial behavior, treatments and exposure to violence - self-reported: extensive analysis.) ///
+ alpha(0.01, 0.05, 0.1) symbol(***,**,*) addstat(F test, e(F)):
+**** regression extensive margin subjective index with individual controls
+reg prosocial primed nws HETSV_ext int_vs_ext_p int_vs_ext_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24, cluster(id) 
+outreg2 using tabla2.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression extensive margin subjective index with district controls
+reg prosocial primed nws HETSV_ext int_vs_ext_p int_vs_ext_n gasto_semanal ///
+educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla2.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression extensive margin subjective index with all controls
+reg prosocial primed nws HETSV_ext int_vs_ext_p int_vs_ext_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24 gasto_semanal educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla2.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+
+
+/*====================================================================
+					Objective analysis
+====================================================================*/
+/*====================================================================
+					Intesive margin 
+====================================================================*/
+**** regression intensive margin subjective index
+reg prosocial primed nws HETV_int int_os_int_p int_os_int_n, cluster(id) 
+outreg2 using tabla3.doc, replace dec(2) ctitle(Prosocial) ///
+title(Table 3. Dif-Dif estimation z-score prosocial behavior, treatments and exposure to violence - objective: intensive analysis.) ///
+ alpha(0.01, 0.05, 0.1) symbol(***,**,*) addstat(F test, e(F)):
+**** regression intensive margin subjective index with individual controls
+reg prosocial primed nws HETV_int int_os_int_p int_os_int_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24, cluster(id) 
+outreg2 using tabla3.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression intensive margin subjective index with district controls
+reg prosocial primed nws HETV_int int_os_int_p int_os_int_n gasto_semanal ///
+educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla3.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression intensive margin subjective index with all controls
+reg prosocial primed nws HETV_int int_os_int_p int_os_int_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24 gasto_semanal educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla3.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+
+/*====================================================================
+					Extensive margin 
+====================================================================*/
+**** regression extensive margin subjective index
+reg prosocial primed nws HETV_ext int_os_ext_p int_os_ext_n, cluster(id) 
+outreg2 using tabla4.doc, replace dec(2) ctitle(Prosocial) ///
+title(Table 4. Dif-Dif estimation z-score prosocial behavior, treatments and exposure to violence - objective: extensive analysis.) ///
+ alpha(0.01, 0.05, 0.1) symbol(***,**,*) addstat(F test, e(F)):
+**** regression extensive margin subjective index with individual controls
+reg prosocial primed nws HETV_ext int_os_ext_p int_os_ext_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24, cluster(id) 
+outreg2 using tabla4.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression extensive margin subjective index with district controls
+reg prosocial primed nws HETV_ext int_os_ext_p int_os_ext_n gasto_semanal ///
+educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla4.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+**** regression extensive margin subjective index with all controls
+reg prosocial primed nws HETV_ext int_os_ext_p int_os_ext_n age ses idipron ///
+female wrongq thesis1playerun thesis1playerpolitical thesis1players25 ///
+thesis1players24 gasto_semanal educacion estrato_1_y_2 movilidad vivienda_propia, cluster(id) 
+outreg2 using tabla4.doc, append ctitle(Prosocial) dec(2) alpha(0.01, 0.05, 0.1) ///
+symbol(***,**,*) addstat(F test, e(F)):
+
+
 
 
 

@@ -1,0 +1,51 @@
+Table 12. Dif-Dif estimation elicitation				
+treatments and exposure to violence - objective: extensive analysis.				
+	(1)	(2)	(3)	(4)
+VARIABLES	Elicitation	Elicitation	Elicitation	Elicitation
+				
+primed	-0.29	-0.40**	-0.29	-0.40**
+	(0.21)	(0.19)	(0.21)	(0.19)
+nws	0.55**	0.52**	0.55**	0.49**
+	(0.22)	(0.20)	(0.22)	(0.21)
+HETV_ext	0.21	0.16	0.23	0.26
+	(0.20)	(0.20)	(0.25)	(0.24)
+int_os_ext_p	0.36	0.44**	0.36	0.44**
+	(0.22)	(0.20)	(0.22)	(0.21)
+int_os_ext_n	-0.57**	-0.54**	-0.55**	-0.51**
+	(0.23)	(0.22)	(0.23)	(0.22)
+age		0.01		0.01
+		(0.01)		(0.01)
+ses		-0.01		-0.04
+		(0.04)		(0.07)
+idipron		-0.24*		-0.16
+		(0.14)		(0.15)
+female		-0.04		-0.02
+		(0.07)		(0.07)
+wrongq		0.05*		0.04
+		(0.03)		(0.03)
+thesis1playerun		0.00		0.03
+		(0.07)		(0.07)
+thesis1playerpolitical		-0.05		-0.05
+		(0.05)		(0.05)
+thesis1players25		-0.07		-0.06
+		(0.04)		(0.05)
+thesis1players24		0.14		0.12
+		(0.09)		(0.10)
+gasto_semanal			0.00	0.00
+			(0.00)	(0.00)
+educacion			-0.07	-0.05
+			(0.05)	(0.06)
+estrato_1_y_2			-0.00	-0.00
+			(0.00)	(0.00)
+movilidad			-0.00	-0.01
+			(0.00)	(0.01)
+vivienda_propia			0.01	0.01
+			(0.01)	(0.01)
+Constant	0.27	0.41	0.96	1.10
+	(0.19)	(0.36)	(0.80)	(0.89)
+				
+Observations	223	223	223	223
+R-squared	0.04	0.08	0.07	0.11
+F test	7.425	3.696	4.390	2.706
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

@@ -1,0 +1,53 @@
+Table 16. Dif-Dif estimation donation				
+treatments and exposure to violence - objective: extensive analysis.				
+	(1)	(2)	(3)	(4)
+VARIABLES	Donation	Donation	Donation	Donation
+				
+primed	-0.21	-0.23*	-0.21	-0.23*
+	(0.13)	(0.13)	(0.13)	(0.13)
+nws	-0.18	-0.19	-0.18	-0.21
+	(0.15)	(0.14)	(0.15)	(0.15)
+HETV_ext	-0.11	-0.11	-0.12	-0.07
+	(0.11)	(0.12)	(0.14)	(0.15)
+int_os_ext_p	0.21	0.21	0.21	0.22
+	(0.14)	(0.14)	(0.14)	(0.14)
+int_os_ext_n	0.14	0.18	0.15	0.19
+	(0.15)	(0.15)	(0.15)	(0.15)
+feedback	0.02	0.03	0.01	0.03
+	(0.04)	(0.04)	(0.04)	(0.05)
+age		0.01		0.01
+		(0.01)		(0.01)
+ses		0.02		0.00
+		(0.03)		(0.04)
+idipron		0.07		0.09
+		(0.09)		(0.09)
+female		0.02		0.02
+		(0.04)		(0.05)
+wrongq		0.05***		0.05***
+		(0.02)		(0.02)
+thesis1playerun		0.04		0.04
+		(0.04)		(0.04)
+thesis1playerpolitical		-0.00		-0.00
+		(0.03)		(0.03)
+thesis1players25		-0.00		-0.01
+		(0.03)		(0.03)
+thesis1players24		-0.07		-0.08
+		(0.06)		(0.06)
+gasto_semanal			0.00	0.00
+			(0.00)	(0.00)
+educacion			0.01	-0.00
+			(0.03)	(0.03)
+estrato_1_y_2			-0.00	-0.00
+			(0.00)	(0.00)
+movilidad			-0.00	-0.00
+			(0.00)	(0.00)
+vivienda_propia			-0.00	-0.00
+			(0.00)	(0.00)
+Constant	0.59***	0.28	0.60	0.64
+	(0.11)	(0.23)	(0.51)	(0.55)
+				
+Observations	223	223	223	223
+R-squared	0.02	0.08	0.03	0.09
+F test	0.910	1.614	0.765	1.500
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

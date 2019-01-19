@@ -1,0 +1,51 @@
+Table 2. Dif-Dif estimation z-score prosocial behavior				
+treatments and exposure to violence - self-reported: extensive analysis.				
+	(1)	(2)	(3)	(4)
+VARIABLES	Prosocial	Prosocial	Prosocial	Prosocial
+				
+primed	-0.19	-0.33*	-0.16	-0.29
+	(0.19)	(0.19)	(0.20)	(0.19)
+nws	-0.35*	-0.36*	-0.35*	-0.36*
+	(0.19)	(0.18)	(0.19)	(0.19)
+HETSV_ext	-0.26	-0.37**	-0.25	-0.36*
+	(0.19)	(0.19)	(0.19)	(0.18)
+int_vs_ext_p	0.22	0.37*	0.19	0.33
+	(0.22)	(0.21)	(0.22)	(0.22)
+int_vs_ext_n	0.33	0.39*	0.34	0.39*
+	(0.22)	(0.21)	(0.21)	(0.21)
+age		0.01		0.01
+		(0.02)		(0.02)
+ses		0.09		0.07
+		(0.07)		(0.09)
+idipron		0.14		0.19
+		(0.15)		(0.17)
+female		-0.07		-0.08
+		(0.10)		(0.10)
+wrongq		0.13***		0.13***
+		(0.03)		(0.04)
+thesis1playerun		0.10		0.11
+		(0.09)		(0.10)
+thesis1playerpolitical		0.04		0.04
+		(0.07)		(0.07)
+thesis1players25		-0.05		-0.05
+		(0.06)		(0.06)
+thesis1players24		-0.04		-0.04
+		(0.13)		(0.13)
+gasto_semanal			0.00	0.00
+			(0.00)	(0.00)
+educacion			0.03	0.04
+			(0.07)	(0.07)
+estrato_1_y_2			0.00	0.00
+			(0.00)	(0.00)
+movilidad			-0.00	-0.01
+			(0.01)	(0.01)
+vivienda_propia			0.00	-0.00
+			(0.01)	(0.01)
+Constant	0.25	-0.34	-0.12	-0.52
+	(0.17)	(0.45)	(1.12)	(1.23)
+				
+Observations	446	446	446	446
+R-squared	0.01	0.05	0.02	0.05
+F test	0.854	1.734	0.720	1.448
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				

@@ -1,0 +1,51 @@
+Table 8. Dif-Dif estimation cooperation				
+treatments and exposure to violence - objective: extensive analysis.				
+	(1)	(2)	(3)	(4)
+VARIABLES	Cooperation	Cooperation	Cooperation	Cooperation
+				
+primed	-0.39***	-0.42***	-0.39***	-0.42***
+	(0.12)	(0.13)	(0.12)	(0.13)
+nws	-0.06	-0.05	-0.06	-0.04
+	(0.13)	(0.13)	(0.13)	(0.13)
+HETV_ext	-0.18*	-0.18	-0.22	-0.23
+	(0.10)	(0.11)	(0.14)	(0.14)
+int_os_ext_p	0.42***	0.44***	0.42***	0.44***
+	(0.13)	(0.14)	(0.13)	(0.14)
+int_os_ext_n	0.03	0.01	0.02	0.00
+	(0.13)	(0.14)	(0.14)	(0.14)
+age		-0.00		-0.00
+		(0.01)		(0.01)
+ses		0.01		0.02
+		(0.03)		(0.04)
+idipron		0.01		0.02
+		(0.05)		(0.06)
+female		-0.06		-0.07
+		(0.04)		(0.04)
+wrongq		0.03*		0.03*
+		(0.02)		(0.02)
+thesis1playerun		0.02		0.02
+		(0.04)		(0.05)
+thesis1playerpolitical		0.03		0.02
+		(0.03)		(0.03)
+thesis1players25		-0.01		-0.01
+		(0.03)		(0.03)
+thesis1players24		0.04		0.06
+		(0.05)		(0.05)
+gasto_semanal			0.00	0.00
+			(0.00)	(0.00)
+educacion			0.02	0.03
+			(0.03)	(0.04)
+estrato_1_y_2			0.00	0.00
+			(0.00)	(0.00)
+movilidad			-0.00	-0.00
+			(0.00)	(0.00)
+vivienda_propia			0.00	0.00
+			(0.00)	(0.00)
+Constant	0.66***	0.59***	0.32	0.08
+	(0.10)	(0.22)	(0.50)	(0.57)
+				
+Observations	223	223	223	223
+R-squared	0.03	0.06	0.04	0.08
+F test	2.456	1.385	1.392	1.130
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1				
